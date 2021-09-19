@@ -29,9 +29,9 @@ rl.on('line', (menuOption) => {
                 } else if (pieceType === '2') {
                     counter_2 += 1;
                 }
-            });
 
-            rl.prompt();
+                rl.prompt();
+            });
 
             break;
         case '2':
