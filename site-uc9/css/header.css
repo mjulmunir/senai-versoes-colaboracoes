@@ -1,0 +1,69 @@
+header {
+    border          : none;
+    background-color: black;
+    height          : fit-content;
+    display         : flex;
+    align-items     : center;
+    justify-content : space-around;
+    text-align      : center;
+    padding         : .5%;
+}
+
+header a {
+    height: inherit;
+    width : fit-content;
+}
+
+.header-item {
+    height         : 4vw;
+    width          : 30%;
+    display        : flex;
+    align-items    : center;
+    justify-content: space-evenly;
+}
+
+#logo img {
+    height: inherit;
+}
+
+.header-item form {
+    background-color: white;
+    border          : none;
+    height          : 1.5vw;
+    width           : fit-content;
+    display         : flex;
+    align-items     : center;
+}
+
+.header-item form input {
+    background-color: transparent;
+    float           : left;
+    border          : none;
+    height          : 80%;
+    width           : 20vw;
+    padding         : 1%;
+    outline         : none;
+    font-size       : 80%;
+}
+
+.header-item form button {
+    float           : right;
+    border          : none;
+    background-color: transparent;
+    height          : inherit;
+    padding         : 1%;
+}
+
+.header-item form img {
+    float : right;
+    height: 90%;
+}
+
+.header-item .icons {
+    height   : 2.8vw;
+    font-size: 1.3vw;
+}
+
+.header-item .icons img {
+    height: 1.5vw;
+}

@@ -1,0 +1,36 @@
+#media-section {
+    background-color: rgb(250, 250, 250);
+    height          : fit-content;
+    padding         : 1% 0;
+}
+
+#social-media {
+    background-color: black;
+    color           : white;
+    text-align      : center;
+    font-size       : 1vw;
+    padding         : 1% 0;
+    margin-bottom   : 1%;
+}
+
+#media {
+    position           : relative;
+    left               : 0;
+    right              : 0;
+    margin             : auto;
+    width              : fit-content;
+    display            : grid;
+    grid-template-areas: "a a a";
+    grid-auto-columns  : fit-content;
+    grid-auto-rows     : fit-content;
+    gap                : 2vw;
+}
+
+#media a {
+    height: fit-content;
+    width : fit-content;
+}
+
+#media img {
+    height: 15vw;
+}
