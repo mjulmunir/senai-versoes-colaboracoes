@@ -14,7 +14,9 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
 
     <link
       rel="shortcut icon"
@@ -24,78 +26,95 @@
   </head>
 
   <body>
-    <div class="container">
-      <header class="nav nav-pills nav-justified align-items-center">
-        <div class="nav-item">
-          <a class="nav-link" href="/">
-            <img
-              src="img/logo-banner/logomarca1.png"
-              class="img-fluid"
-              alt="logomarca1.png"
-            />
-          </a>
-        </div>
-        <div class="nav-item">
-          <form class="input-group mb-3">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Search"
-              aria-label="Search"
-              aria-describedby="button-addon2"
-            />
-            <button
-              class="btn btn-outline-secondary"
-              type="submit"
-              id="button-addon2"
-            >
-              <img
-                src="img/icons/magnifying-glass.png"
-                alt="magnifying-glass.png"
-                class="img-fluid"
-              />
-            </button>
-          </form>
-        </div>
-        <div class="nav-item nav nav-pills nav-justified">
-          <a href="" class="nav-link">
-            <div class="text-center">
-              <img src="img/icons/user.png" class="rounded" alt="user.png" />
-              <br />
-              Login
-            </div>
-          </a>
-          <a href="" class="nav-link">
-            <div class="text-center">
-              <img
-                src="img/icons/shopping-cart.png"
-                class="rounded"
-                alt="shopping-cart.png"
-              />
-              <br />
-              Carrinho
-            </div>
-          </a>
-          <a href="" class="nav-link">
-            <div class="text-center">
-              <img
-                src="img/icons/headphone.png"
-                class="rounded"
-                alt="headphone.png"
-              />
-              <br />
-              Contato
-            </div>
-          </a>
-        </div>
-      </header>
+    <header class="nav nav-justified navbar-dark bg-dark">
+      <div class="nav-item">
+        <a href="/"
+          ><img
+            src="/img/logo-banner/logomarca1.png"
+            alt="logomarca1.png"
+            class="img-fluid"
+        /></a>
+      </div>
 
-      <img
-        src="img/logo-banner/banner.png"
-        class="img-fluid"
-        alt="banner.png"
-      />
-    </div>
+      <div class="nav-item d-flex align-items-center justify-content-around">
+        <form class="d-flex align-items-center">
+          <input
+            class="form-control"
+            type="search"
+            placeholder="Busque seu produto ..."
+            aria-label="Search"
+          />
+          <button
+            class="
+              btn btn-outline-success
+              d-flex
+              align-items-center
+              justify-content-center
+            "
+            type="submit"
+          >
+            <img
+              src="/img/icons/magnifying-glass.png"
+              alt="magnifying-glass.png"
+              class="img-fluid"
+            />
+          </button>
+        </form>
+      </div>
+
+      <div class="nav-item d-flex justify-content-center">
+        <div class="nav-item">
+          <a href="/account.html" class="nav-link"
+            ><img
+              src="/img/icons/user.png"
+              alt="user.png"
+              class="img-fluid"
+            /><br />Login</a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="/account.html" class="nav-link"
+            ><img
+              src="/img/icons/shopping-cart.png"
+              alt="shopping-cart.png"
+              class="img-fluid"
+            /><br />Carrinho</a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="/contact.html" class="nav-link"
+            ><img
+              src="/img/icons/headphone.png"
+              alt="headphone.png"
+              class="img-fluid"
+            /><br />Conta</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <img src="/img/logo-banner/banner.png" alt="banner.png" class="img-fluid" />
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <button
+          class="
+            d-flex
+            align-items-center
+            justify-content-center
+            navbar-toggler
+          "
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
   </body>
 
   <script

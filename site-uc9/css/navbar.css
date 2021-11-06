@@ -1,0 +1,10 @@
+/* Navbar button toggler */
+nav .navbar-toggler span {
+  max-width: 3vw;
+  max-height: 2vw;
+}
+
+nav .navbar-toggler {
+  height: fit-content;
+  width: fit-content;
+}
