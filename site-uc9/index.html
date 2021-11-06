@@ -1,198 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Loja</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/banner.css">
-    <!-- <link rel="stylesheet" href="css/navbar.css"> -->
-    <link rel="stylesheet" href="css/products.css">
-    <link rel="stylesheet" href="css/media.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/style.css" />
 
-    <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
-</head>
+    <link
+      rel="shortcut icon"
+      href="img/icons/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
 
-<body>
-    <div id="main">
-        <header>
-            <div class="header-item">
-                <a href="/" id="logo"><img src="images/logo-banner/logomarca1.png" alt="logomarca"></a>
-            </div>
-            <div class="header-item">
-                <form action="" method="get">
-                    <input type="text" placeholder="Busque seu produto ...">
-                    <button type="submit"><img src="images/icons/magnifying-glass.png" alt="lupa"></button>
-                </form>
-            </div>
-            <div class="header-item">
-                <div class="icons">
-                    <a href="./account.html" target="_self">
-                        <div><img src="images/icons/user.png" alt="usuário"><br>Login</div>
-                    </a>
-                </div>
-                <div class="icons">
-                    <a href="./account.html" target="_self">
-                        <div><img src="images/icons/shopping-cart.png" alt="carrinho de compras"><br>Carrinho</div>
-                    </a>
-                </div>
-                <div class="icons">
-                    <a href="./contact.html" target="_self">
-                        <div><img src="images/icons/headphone.png" alt="headphone"><br>Contato</div>
-                    </a>
-                </div>
-            </div>
-        </header>
-
-        <div class="banner">
-            <img src="images/logo-banner/banner.png" alt="banner" width="100%">
+  <body>
+    <div class="container">
+      <header class="nav nav-pills nav-justified align-items-center">
+        <div class="nav-item">
+          <a class="nav-link" href="/">
+            <img
+              src="img/logo-banner/logomarca1.png"
+              class="img-fluid"
+              alt="logomarca1.png"
+            />
+          </a>
         </div>
-
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <div class="nav-item dropdown">
-                            <!-- <img src="images/icons/menu.svg" alt="menu" class="d-inline-block align-text-top"> -->
-                            Todas as categorias
-                            <div class="dropdown-content">
-                                <a class="dropdown-item" href="#" target="_self"># Computadores</a>
-                                <a class="dropdown-item" href="#" target="_self"># Smartphones</a>
-                                <a class="dropdown-item" href="#" target="_self"># Tablets</a>
-                                <a class="dropdown-item" href="#" target="_self"># Consoles</a>
-                                <a class="dropdown-item" href="#" target="_self"># Hardware</a>
-                                <a class="dropdown-item" href="#" target="_self"># Periféricos</a>
-                                <a class="dropdown-item" href="#" target="_self"># Digital</a>
-                                <a class="dropdown-item" href="#" target="_self"># Cadeiras</a>
-                            </div>
-                        </div>
-                        <a class="nav-link" href="#" target="_self">Novidades</a>
-                        <a class="nav-link" href="#" target="_self">Promoções</a>
-                        <a class="nav-link" href="#" target="_self">Kits</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-        <div id="products-section">
-            <div class="products">
-                <div class="title">
-                    <img src="images/icons/bell.png" alt="fire.png">
-                    <b>Produtos novos</b>
-                </div>
-                <div id="new"></div>
-            </div>
-
-            <div class="products">
-                <div class="title">
-                    <img src="images/icons/fire.png" alt="fire.png">
-                    <b>Ofertas em destaque</b>
-                </div>
-                <div id="featured"></div>
-            </div>
-
-            <div id="more"><button><b>MAIS PRODUTOS</b></button></div>
+        <div class="nav-item">
+          <form class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search"
+              aria-label="Search"
+              aria-describedby="button-addon2"
+            />
+            <button
+              class="btn btn-outline-secondary"
+              type="submit"
+              id="button-addon2"
+            >
+              <img
+                src="img/icons/magnifying-glass.png"
+                alt="magnifying-glass.png"
+                class="img-fluid"
+              />
+            </button>
+          </form>
         </div>
-
-        <div id="media-section">
-            <div id="social-media"><b>PRODUTOS E CLIENTES NAS REDES SOCIAIS</b></div>
-
-            <div id="media"></div>
+        <div class="nav-item nav nav-pills nav-justified">
+          <a href="" class="nav-link">
+            <div class="text-center">
+              <img src="img/icons/user.png" class="rounded" alt="user.png" />
+              <br />
+              Login
+            </div>
+          </a>
+          <a href="" class="nav-link">
+            <div class="text-center">
+              <img
+                src="img/icons/shopping-cart.png"
+                class="rounded"
+                alt="shopping-cart.png"
+              />
+              <br />
+              Carrinho
+            </div>
+          </a>
+          <a href="" class="nav-link">
+            <div class="text-center">
+              <img
+                src="img/icons/headphone.png"
+                class="rounded"
+                alt="headphone.png"
+              />
+              <br />
+              Contato
+            </div>
+          </a>
         </div>
+      </header>
 
-        <footer>
-            <div class="footer-block">
-                <div class="footer-block-title"><b>INSTITUCIONAL</b></div>
-                <div class="footer-item">
-                    <img src="images/icons/circle.png" alt="circle.png"><a href="./info.html" target="_self">Quem
-                        somos</a>
-                </div>
-                <div class="footer-item">
-                    <img src="images/icons/circle.png" alt="circle.png"><a href="./info.html"
-                        target="_self">Localização</a>
-                </div>
-                <div class="footer-item">
-                    <img src="images/icons/circle.png" alt="circle.png"><a href="./info.html" target="_self">Nossa
-                        Loja</a>
-                </div>
-            </div>
-            <div class="footer-block">
-                <div class="footer-block-title"><b>DÚVIDAS</b></div>
-                <div class="footer-item">
-                    <img src="images/icons/circle.png" alt="circle.png"><a href="./contact.html"
-                        target="_self">Entrega</a>
-                </div>
-                <div class="footer-item">
-                    <img src="images/icons/circle.png" alt="circle.png"><a href="./contact.html"
-                        target="_self">Garantia</a>
-                </div>
-                <div class="footer-item">
-                    <img src="images/icons/circle.png" alt="circle.png"><a href="./contact.html" target="_self">Como
-                        comprar</a>
-                </div>
-                <div class="footer-item">
-                    <img src="images/icons/circle.png" alt="circle.png"><a href="./contact.html" target="_self">Formas
-                        de pagamento</a>
-                </div>
-            </div>
-            <div class="footer-block">
-                <div class="footer-block-title">
-                    <b>AJUDA</b>
-                </div>
-                <div class="footer-item">
-                    <img src="images/icons/circle.png" alt="circle.png"><a href="./contact.html" target="_self">SAC</a>
-                </div>
-                <div class="footer-item">
-                    <img src="images/icons/circle.png" alt="circle.png"><a href="./contact.html" target="_self">Fale
-                        conosco</a>
-                </div>
-            </div>
-            <div class="footer-block">
-                <div class="footer-block-title"><b>CLIENTE</b></div>
-                <div class="footer-item">
-                    <img src="images/icons/circle.png" alt="circle.png"><a href="./account.html" target="_self">Minha
-                        conta</a>
-                </div>
-                <div class="footer-item">
-                    <img src="images/icons/circle.png" alt="circle.png"><a href="./account.html" target="_self">Meus
-                        pedidos</a>
-                </div>
-            </div>
-            <div class="footer-block">
-                <div class="footer-block-title access-links">
-                    <b>CONTATO</b><br>
-                    <a href="./contact.html" target="_self"><img src="images/icons/headphone.png" alt="headphone.png"
-                            id="contact"></a>
-                </div>
-            </div>
-            <div class="footer-block">
-                <div class="footer-block-title access-links">
-                    <b>REDES SOCIAIS</b>
-                    <br>
-                    <a href="https://www.facebook.com/" target="_blank"><img src="images/icons/facebook.png"
-                            alt="headphone.png"></a>
-                    <a href="https://www.instagram.com/" target="_blank"><img src="images/icons/instagram.png"
-                            alt="headphone.png"></a>
-                </div>
-            </div>
-        </footer>
+      <img
+        src="img/logo-banner/banner.png"
+        class="img-fluid"
+        alt="banner.png"
+      />
     </div>
-</body>
+  </body>
 
-<script src="./js/add-files.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"
+  ></script>
 </html>

@@ -1,0 +1,14 @@
+body {
+  background-color: rgb(15, 15, 15);
+}
+
+.nav {
+  background-color: rgb(12, 12, 12);
+}
+
+.btn,
+.form-control {
+  background-color: white;
+  border: none;
+  outline: none;
+}
