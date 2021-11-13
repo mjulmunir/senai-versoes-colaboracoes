@@ -1,12 +1,18 @@
 /* Main */
 .link-item:focus,
 .link-item:hover {
-	background-color: #198754 !important;
-	border-color: #198754 !important;
-	color: white !important;
-	text-decoration: none !important;
+  background-color: #198754 !important;
+  border-color: #198754 !important;
+  color: white !important;
+  text-decoration: none !important;
 }
 
-.footer-link:hover{
-	color: #198754;
+.section {
+  background-color: rgb(230, 230, 230);
+  height: fit-content;
+  padding: 5%;
+}
+
+.footer-link:hover {
+  color: #198754;
 }

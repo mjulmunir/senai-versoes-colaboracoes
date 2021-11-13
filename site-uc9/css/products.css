@@ -1,0 +1,39 @@
+.products h4 {
+  height: 2vw;
+  margin-bottom: 4% 0;
+}
+
+.products h4 .img-fluid {
+  max-height: 2vw;
+}
+
+.products .row {
+  height: fit-content;
+}
+
+.products .row .d-flex {
+  height: 25vw;
+}
+
+.products .row .col {
+  text-decoration: none;
+  color: black;
+}
+
+.products .row .col .d-flex .product {
+  height: 50%;
+  margin-bottom: 10%;
+}
+
+.products .row .col .d-flex .product .img-fluid {
+  max-height: 100%;
+}
+
+.products .row .col .d-flex .product-info {
+  height: 8%;
+  margin-bottom: 14%;
+}
+
+.products .row .col:hover {
+  box-shadow: 0 0 2vw 1vw rgba(0, 0, 0, 0.2);
+}
