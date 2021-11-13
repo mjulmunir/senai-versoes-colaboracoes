@@ -1,10 +1,28 @@
-/* Navbar button toggler */
-nav .navbar-toggler span {
-  max-width: 3vw;
-  max-height: 2vw;
+/* .navbar {
+	font-size: 1.3vw;
+} */
+
+.navbar .nav {
+	height: 5vw !important;
+	margin: 0;
+	padding: 0 10% !important;
 }
 
-nav .navbar-toggler {
-  height: fit-content;
-  width: fit-content;
+.navbar .nav-link,
+.navbar .dropdown-menu {
+	width: 100% !important;
+	border-color: #198754;
+}
+
+.navbar .dropdown-menu .nav-link {
+	width: 100% !important;
+}
+
+.navbar .show .nav {
+	height: auto !important;
+}
+
+.navbar .show .nav-link,
+.navbar .show .dropdown-menu {
+	width: 100% !important;
 }

@@ -1,75 +1,60 @@
 /* Header */
-.nav {
-  padding: 0.5%;
-  align-items: center;
-  height: 5vw;
+@media only screen and (min-width: 600px) {
+	header .nav,
+	header .navbar,
+	header .nav-item,
+	header .nav-link {
+		height: 8vw !important;
+	}
 }
 
-header .nav-item {
-  height: 3vw;
+@media only screen and (max-width: 600px) {
+	header .nav,
+	header .navbar,
+	header .nav-item,
+	header .nav-link {
+		height: 10vw !important;
+	}
 }
 
-/* Header item 1 */
-header .nav-item a .img-fluid {
-  max-height: 100%;
+header .nav,
+header .navbar,
+header .nav-item,
+header .nav-link {
+	margin: 0 !important;
+	padding: 0 !important;
 }
 
-/* Header item 2 */
-header .nav-item .d-flex {
-  height: 75%;
-  width: 100%;
+/* Header - item 1 */
+header .img-fluid {
+	max-height: 80%;
 }
 
-header .nav-item .d-flex .form-control {
-  font-size: .9vw;
-  border: none;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+/* Header - item 2 */
+header form.d-flex {
+	height: 3vw;
+	width: 100%;
 }
 
-header .nav-item .d-flex .btn {
-  background-color: #2b9966;
-  border: none;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  padding: 0;
-  margin: 0;
+header form .form-control,
+header form .btn {
+	height: inherit;
+	padding: 0 1%;
+	border-radius: 0;
+	font-size: 1.2vw;
 }
 
-header .nav-item .d-flex .form-control {
-  height: inherit;
+/* Header - item 3 */
+header .nav .nav-item .d-flex .nav-item .nav-link {
+	font-size: 1.3vw;
 }
 
-header .nav-item .d-flex .btn {
-  height: inherit;
-  width: 3vw;
+header .quick-access .nav-link {
+	height: 80% !important;
+	width: 60% !important;
+	padding: 0 !important;
 }
 
-header .nav-item .d-flex .btn img {
-  max-height: 80%;
-  max-width: inherit;
-}
-
-/* Header item 3 */
-header .d-flex .nav-link {
-  color: white;
-  font-size: 1vw;
-}
-
-header .d-flex .nav-item {
-  flex-grow: 0;
-  margin: 0 5%;
-}
-
-header .d-flex .nav-item .nav-link {
-  height: fit-content;
-  width: fit-content;
-  margin: auto;
-  padding: 0;
-}
-
-header .d-flex .nav-item .nav-link img {
-  max-height: 1.5vw;
-  max-width: 1.5vw;
-  margin: 0;
+header .quick-access .img-fluid {
+	max-height: 50%;
 }
