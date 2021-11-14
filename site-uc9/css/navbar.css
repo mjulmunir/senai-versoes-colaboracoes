@@ -26,3 +26,16 @@
 .navbar .show .dropdown-menu {
 	width: 100% !important;
 }
+
+.navbar .navbar-toggler {
+	height: 4vw;
+	width: auto;
+	padding: 0.1% 2%;
+}
+
+.navbar .navbar-toggler span {
+	height: 90%;
+	width: 4vw;
+	margin: 0;
+	float: left;
+}

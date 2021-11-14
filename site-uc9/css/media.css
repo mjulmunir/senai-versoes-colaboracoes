@@ -1,22 +1,26 @@
-.media h4 {
-  height: 2vw;
-  margin-bottom: 4% 0;
-}
-
-.media h4 .img-fluid {
-  max-height: 2vw;
-}
-
 .media .row {
-  height: fit-content;
+	height: fit-content;
 }
 
-.media .row .col,
-.media .row .col .d-flex .product {
-  height: fit-content;
-  width: fit-content;
+.media .col .link {
+	background-color: rgb(240, 240, 240);
+	display: inline-block;
+	height: fit-content;
+	width: fit-content;
+	text-decoration: none;
+	color: black;
 }
 
-.media .row .col:hover {
-  box-shadow: 0 0 2vw 1vw rgba(0, 0, 0, 0.2);
+@media only screen and (min-width: 992px) {
+	.media .col .link .image {
+		height: 18vw;
+		width: auto;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.media .col .link .image {
+		max-width: 50vw;
+		height: auto;
+	}
 }

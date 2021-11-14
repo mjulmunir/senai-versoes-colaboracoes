@@ -1,16 +1,3 @@
-.main-section {
-    display        : flex;
-    align-items    : center;
-    justify-content: center;
-    text-align     : justify;
-}
-
-#info {
-    display            : grid;
-    grid-template-areas: "a a a";
-    grid-auto-rows     : fit-content;
-    grid-auto-columns  : fit-content;
-    gap                : 2vw;
-    margin-top         : 2vw;
-    text-align         : left;
+.section{
+    text-align: justify;
 }

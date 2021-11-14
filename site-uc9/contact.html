@@ -1,169 +1,544 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Loja</title>
 
-    <title>Contato</title>
+		<link
+			rel="shortcut icon"
+			href="img/icons/favicon.ico"
+			type="image/x-icon"
+		/>
 
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/menu-nav.css">
-    <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/footer.css">
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/navbar.css" />
+		<link rel="stylesheet" href="css/contact.css" />
+		<link rel="stylesheet" href="css/footer.css" />
 
-    <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
-</head>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
 
-<body>
-    <div id="main">
-        <header>
-            <div class="header-item">
-                <a href="/" id="logo"><img src="images/logo-banner/logomarca1.png" alt="logomarca"></a>
-            </div>
-            <div class="header-item">
-                <form action="" method="get">
-                    <input type="text" placeholder="Busque seu produto ...">
-                    <button type="submit"><img src="images/icons/magnifying-glass.png" alt="lupa"></button>
-                </form>
-            </div>
-            <div class="header-item">
-                <div class="icons">
-                    <a href="./account.html" target="_self">
-                        <div><img src="images/icons/user.png" alt="usuário"><br>Login</div>
-                    </a>
-                </div>
-                <div class="icons">
-                    <a href="./account.html" target="_self">
-                        <div><img src="images/icons/shopping-cart.png" alt="carrinho de compras"><br>Carrinho</div>
-                    </a>
-                </div>
-                <div class="icons">
-                    <a href="./contact.html" target="_self">
-                        <div><img src="images/icons/headphone.png" alt="headphone"><br>Contato</div>
-                    </a>
-                </div>
-            </div>
-        </header>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"
+			defer
+		></script>
+	</head>
 
-        <nav>
-            <div class="nav-item dropdown">
-                <img src="images/icons/menu.svg" alt="menu">
-                Todas as categorias
-                <div class="dropdown-content">
-                    <a href="#" target="_self"># Computadores</a>
-                    <a href="#" target="_self"># Smartphones</a>
-                    <a href="#" target="_self"># Tablets</a>
-                    <a href="#" target="_self"># Consoles</a>
-                    <a href="#" target="_self"># Hardware</a>
-                    <a href="#" target="_self"># Periféricos</a>
-                    <a href="#" target="_self"># Digital</a>
-                    <a href="#" target="_self"># Cadeiras</a>
-                </div>
-            </div>
-            <a href="#" target="_self" class="nav-item">Novidades</a>
-            <a href="#" target="_self" class="nav-item">Promoções</a>
-            <a href="#" target="_self" class="nav-item">Kits</a>
-        </nav>
+	<body>
+		<header>
+			<ul class="nav nav-justified navbar-dark bg-dark">
+				<li
+					class="
+						nav-item
+						d-flex
+						justify-content-center
+						align-items-center
+					"
+				>
+					<a
+						href="/"
+						class="
+							nav-link
+							d-flex
+							justify-content-center
+							align-items-center
+						"
+					>
+						<img
+							src="img/logo-banner/logomarca1.png"
+							alt="logomarca"
+							class="img-fluid"
+						/>
+					</a>
+				</li>
+				<li
+					class="
+						nav-item
+						d-flex
+						justify-content-center
+						align-items-center
+					"
+				>
+					<form class="d-flex">
+						<input
+							class="
+								form-control
+								d-flex
+								justify-content-center
+								align-items-center
+								rounded-start
+							"
+							type="search"
+							placeholder="Busque seu produto ..."
+							aria-label="Search"
+						/>
+						<button
+							class="
+								btn btn-primary btn-outline-primary
+								d-flex
+								justify-content-center
+								align-items-center
+								rounded-end
+								link-item
+							"
+							type="submit"
+						>
+							<img
+								src="img/icons/magnifying-glass.png"
+								alt="magnifying-glass.png"
+								class="img-fluid"
+							/>
+						</button>
+					</form>
+				</li>
+				<li
+					class="
+						nav-item
+						d-flex
+						justify-content-center
+						align-items-center
+						quick-access
+					"
+				>
+					<ul
+						class="
+							d-flex
+							container-fluid
+							align-items-center
+							justify-content-center
+						"
+					>
+						<li
+							class="
+								nav-item
+								d-flex
+								justify-content-center
+								align-items-center
+							"
+						>
+							<a
+								href="account.html"
+								class="
+									nav-link
+									link-item
+									rounded
+									d-flex
+									align-items-center
+									justify-content-center
+									flex-column
+								"
+							>
+								<img
+									src="img/icons/user.png"
+									alt="user.png"
+									class="img-fluid"
+								/>
+								Login
+							</a>
+						</li>
+						<li
+							class="
+								nav-item
+								d-flex
+								justify-content-center
+								align-items-center
+							"
+						>
+							<a
+								href="account.html"
+								class="
+									nav-link
+									link-item
+									rounded
+									d-flex
+									align-items-center
+									justify-content-center
+									flex-column
+								"
+							>
+								<img
+									src="img/icons/shopping-cart.png"
+									alt="shopping-cart.png"
+									class="img-fluid"
+								/>
+								Carrinho
+							</a>
+						</li>
+						<li
+							class="
+								nav-item
+								d-flex
+								justify-content-center
+								align-items-center
+							"
+						>
+							<a
+								href="contact.html"
+								class="
+									nav-link
+									link-item
+									rounded
+									d-flex
+									align-items-center
+									justify-content-center
+									flex-column
+								"
+							>
+								<img
+									src="img/icons/headphone.png"
+									alt="headphone.png"
+									class="img-fluid"
+								/>
+								Contato
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</header>
 
-        <div class="main-section">
-            <div id="page-data">
-                <div id="frequent-doubts">
-                    <h2>Dúvidas Frequentes</h2>
-                    <button type="submit">Dúvida sobre Cadastro</button>
-                    <button type="submit">Dúvida sobre Entrega</button>
-                    <button type="submit">Dúvida sobre Alteração do Endereço de Entrega</button>
-                    <button type="submit">Como Acionar a Garantia</button>
-                    <button type="submit">Como Rastrear o Pedido</button>
-                </div>
-                <div id="contact">
-                    <h2>Contato</h2>
-                    <button type="submit">E-mail:</button>
-                    <button type="submit">Telefone SAC:</button>
-                    <button type="submit">Inicie um chat online</button>
-                </div>
-            </div>
-        </div>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="collapse navbar-collapse"
+					id="navbarSupportedContent"
+				>
+					<ul
+						class="
+							nav nav-justified
+							align-items-center
+							container-fluid
+						"
+					>
+						<li class="nav-item dropdown">
+							<a
+								class="
+									nav-link
+									dropdown-toggle
+									link-item
+									rounded
+								"
+								href="#"
+								id="navbarDropdown"
+								role="button"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								Todas as categorias
+							</a>
+							<ul
+								class="dropdown-menu bg-dark"
+								aria-labelledby="navbarDropdown"
+							>
+								<li>
+									<a
+										class="
+											nav-link
+											dropdown-item
+											link-item
+											rounded
+										"
+										href="#"
+										># Computadores</a
+									>
+								</li>
+								<li>
+									<a
+										class="
+											nav-link
+											dropdown-item
+											link-item
+											rounded
+										"
+										href="#"
+										># Smartphones</a
+									>
+								</li>
+								<li>
+									<a
+										class="
+											nav-link
+											dropdown-item
+											link-item
+											rounded
+										"
+										href="#"
+										># Tablets</a
+									>
+								</li>
+								<li>
+									<a
+										class="
+											nav-link
+											dropdown-item
+											link-item
+											rounded
+										"
+										href="#"
+										># Consoles</a
+									>
+								</li>
+								<li>
+									<a
+										class="
+											nav-link
+											dropdown-item
+											link-item
+											rounded
+										"
+										href="#"
+										># Hardware</a
+									>
+								</li>
+								<li>
+									<a
+										class="
+											nav-link
+											dropdown-item
+											link-item
+											rounded
+										"
+										href="#"
+										># Periféricos</a
+									>
+								</li>
+								<li>
+									<a
+										class="
+											nav-link
+											dropdown-item
+											link-item
+											rounded
+										"
+										href="#"
+										># Produtos digitais</a
+									>
+								</li>
+								<li>
+									<a
+										class="
+											nav-link
+											dropdown-item
+											link-item
+											rounded
+										"
+										href="#"
+										># Cadeiras</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link link-item rounded text-center"
+								href="#"
+								>Novidades</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link link-item rounded text-center"
+								href="#"
+								>Promoções</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link link-item rounded text-center"
+								href="#"
+								>Kits</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
-        <footer>
-            <div class="footer-block">
-                <div class="footer-block-title"><b>INSTITUCIONAL</b></div>
-                <div class="footer-item">
-                    <img src="images/icons/circle.png" alt="circle.png"><a href="./info.html" target="_self">Quem
-                        somos</a>
-                </div>
-                <div class="footer-item">
-                    <img src="images/icons/circle.png" alt="circle.png"><a href="./info.html"
-                        target="_self">Localização</a>
-                </div>
-                <div class="footer-item">
-                    <img src="images/icons/circle.png" alt="circle.png"><a href="./info.html" target="_self">Nossa
-                        Loja</a>
-                </div>
-            </div>
-            <div class="footer-block">
-                <div class="footer-block-title"><b>DÚVIDAS</b></div>
-                <div class="footer-item">
-                    <img src="images/icons/circle.png" alt="circle.png"><a href="./contact.html"
-                        target="_self">Entrega</a>
-                </div>
-                <div class="footer-item">
-                    <img src="images/icons/circle.png" alt="circle.png"><a href="./contact.html"
-                        target="_self">Garantia</a>
-                </div>
-                <div class="footer-item">
-                    <img src="images/icons/circle.png" alt="circle.png"><a href="./contact.html" target="_self">Como
-                        comprar</a>
-                </div>
-                <div class="footer-item">
-                    <img src="images/icons/circle.png" alt="circle.png"><a href="./contact.html" target="_self">Formas de
-                        pagamento</a>
-                </div>
-            </div>
-            <div class="footer-block">
-                <div class="footer-block-title">
-                    <b>AJUDA</b>
-                </div>
-                <div class="footer-item">
-                    <img src="images/icons/circle.png" alt="circle.png"><a href="./contact.html" target="_self">SAC</a>
-                </div>
-                <div class="footer-item">
-                    <img src="images/icons/circle.png" alt="circle.png"><a href="./contact.html" target="_self">Fale
-                        conosco</a>
-                </div>
-            </div>
-            <div class="footer-block">
-                <div class="footer-block-title"><b>CLIENTE</b></div>
-                <div class="footer-item">
-                    <img src="images/icons/circle.png" alt="circle.png"><a href="./account.html" target="_self">Minha
-                        conta</a>
-                </div>
-                <div class="footer-item">
-                    <img src="images/icons/circle.png" alt="circle.png"><a href="./account.html" target="_self">Meus
-                        pedidos</a>
-                </div>
-            </div>
-            <div class="footer-block">
-                <div class="footer-block-title access-links">
-                    <b>CONTATO</b><br>
-                    <a href="./contact.html" target="_self"><img src="images/icons/headphone.png" alt="headphone.png"
-                            id="contact"></a>
-                </div>
-            </div>
-            <div class="footer-block">
-                <div class="footer-block-title access-links">
-                    <b>REDES SOCIAIS</b>
-                    <br>
-                    <a href="https://www.facebook.com/" target="_blank"><img src="images/icons/facebook.png"
-                            alt="headphone.png"></a>
-                    <a href="https://www.instagram.com/" target="_blank"><img src="images/icons/instagram.png"
-                            alt="headphone.png"></a>
-                </div>
-            </div>
-        </footer>
-    </div>
-</body>
+		<div class="section">
+			<div class="container text-left">
+				<div class="row row-cols-1 row-cols-lg-2 gx-lg-5">
+					<div class="col">
+						<h2 id="doubts">Dúvidas Frequentes</h2>
+						<div class="row row-cols-1">
+							<button
+								type="button"
+								class="btn btn-outline-success"
+							>
+								Dúvida sobre Cadastro
+							</button>
+							<button
+								type="button"
+								class="btn btn-outline-success"
+							>
+								Dúvida sobre Entrega
+							</button>
+							<button
+								type="button"
+								class="btn btn-outline-success"
+							>
+								Dúvida sobre Alteração do Endereço de Entrega
+							</button>
+							<button
+								type="button"
+								class="btn btn-outline-success"
+							>
+								Como Acionar a Garantia
+							</button>
+							<button
+								type="button"
+								class="btn btn-outline-success"
+							>
+								Como Rastrear o Pedido
+							</button>
+						</div>
+					</div>
+					<div class="col">
+						<h2 id="contact">Contato</h2>
+						<div class="row row-cols-1">
+							<button
+								type="button"
+								class="btn btn-outline-success"
+							>
+								E-mail:
+							</button>
+							<button
+								type="button"
+								class="btn btn-outline-success"
+							>
+								Telefone SAC:
+							</button>
+							<button
+								type="button"
+								class="btn btn-outline-success"
+							>
+								Inicie um chat online
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
+		<footer class="bg-dark">
+			<div class="container">
+				<div
+					class="
+						row row-cols-2 row-cols-sm-3 row-cols-lg-6
+						text-center
+					"
+				>
+					<div class="col">
+						INSTITUCIONAL
+						<a href="info.html" class="nav-link link-item rounded"
+							>Quem somos</a
+						>
+						<a href="info.html" class="nav-link link-item rounded"
+							>Localização</a
+						>
+						<a href="info.html" class="nav-link link-item rounded"
+							>Nossa loja</a
+						>
+					</div>
+					<div class="col">
+						DÚVIDAS
+						<a
+							href="contact.html"
+							class="nav-link link-item rounded"
+							>Entrega</a
+						>
+						<a
+							href="contact.html"
+							class="nav-link link-item rounded"
+							>Garantia</a
+						>
+						<a
+							href="contact.html"
+							class="nav-link link-item rounded"
+							>Como comprar</a
+						>
+						<a
+							href="contact.html"
+							class="nav-link link-item rounded"
+							>Formas de pagamento</a
+						>
+					</div>
+					<div class="col">
+						AJUDA
+						<a
+							href="contact.html"
+							class="nav-link link-item rounded"
+							>SAC</a
+						>
+						<a
+							href="contact.html"
+							class="nav-link link-item rounded"
+							>Fale conosco</a
+						>
+					</div>
+					<div class="col">
+						CLIENTE
+						<a
+							href="account.html"
+							class="nav-link link-item rounded"
+							>Minha conta</a
+						>
+						<a
+							href="account.html"
+							class="nav-link link-item rounded"
+							>Meus pedidos</a
+						>
+					</div>
+					<div class="col">
+						<div class="footer-link">
+							<p>CONTATO</p>
+							<a href="contact.html"
+								><img
+									src="img/icons/headphone.png"
+									alt="headphone.png"
+									class="img-fluid"
+							/></a>
+						</div>
+					</div>
+					<div class="col">
+						<div class="footer-link">
+							<p>REDES SOCIAIS</p>
+							<a href="https://www.facebook.com/" target="_blank"
+								><img
+									src="img/icons/facebook.png"
+									alt="facebook.png"
+									class="img-fluid"
+							/></a>
+							<a href="https://www.instagram.com/" target="_blank"
+								><img
+									src="img/icons/instagram.png"
+									alt="instagram.png"
+									class="img-fluid"
+							/></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>
