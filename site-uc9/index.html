@@ -34,7 +34,32 @@
 			defer
 		></script>
 
-		<script src="./js/add-items.js" defer></script>
+		<script type="module" defer>
+			import newProducts from "./js/new-products.js";
+			import featuredProducts from "./js/featured-products.js";
+			import mediaContent from "./js/media.js";
+			import { listProducts, listMedia } from "./js/list-items.js";
+
+			const new_products = newProducts();
+			const featured_products = featuredProducts();
+			const media_content = mediaContent();
+
+			listProducts(
+				new_products.productsList,
+				new_products.productsFolder,
+				new_products.products
+			);
+			listProducts(
+				featured_products.productsList,
+				featured_products.productsFolder,
+				featured_products.products
+			);
+			listMedia(
+				media_content.mediaList,
+				media_content.mediaFolder,
+				media_content.media
+			);
+		</script>
 	</head>
 
 	<body>
