@@ -1,29 +1,76 @@
-.products {
-    width: 60%;
+.products .title {
+  height: 5vw;
+  font-size: 2vw;
+  margin-bottom: 4%;
+  margin-top: 0;
 }
 
-#promotion-products .link {
-    background-color: rgb(235, 235, 235);
-    text-decoration: none;
-    color: black;
-    width: 100%;
-    margin: 3% 0;
-    padding: 1% 0;
+.products .title .img-fluid {
+  max-height: 60%;
+  margin-right: 1.5%;
 }
 
-#promotion-products .link:hover {
-    box-shadow: 0 0 0.5vw 0.5vw rgba(0, 0, 0, 0.2);
-    z-index: 1;
+.products .row {
+  height: fit-content;
 }
 
-#promotion-products .col {
-    height: 160px;
+.products .col .link {
+  background-color: rgb(235, 235, 235);
+  display: inline-block;
+  height: 25vw;
+  width: 85%;
+  text-decoration: none;
+  color: black;
 }
 
-#promotion-products .img-fluid {
-    max-height: 80%;
+.products .col .link:hover {
+  box-shadow: 0 0 0.5vw 0.5vw rgba(25, 135, 84, 0.2);
+  z-index: 1;
 }
 
-#promotion-products .warning {
-    width: 100% !important;
+.products .col .link .image {
+  height: 40%;
+  width: 70%;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.products .col .link .info {
+  height: 40%;
+  width: 70%;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 0.5vw 0;
+  font-size: 1vw;
+}
+
+.products .col .link .info p {
+  margin: 0;
+}
+
+.products .col .link .info .description {
+  height: 80%;
+}
+
+.products .col .link .info p {
+  height: 20%;
+}
+
+.products .col .link .image .img-fluid {
+  max-height: 80%;
+}
+
+.products .col .link .timer {
+  margin-top: 3%;
+  height: 20%;
+  width: 60%;
+  font-size: 1vw;
+}
+
+.products .my-button {
+  margin-top: 5%;
 }

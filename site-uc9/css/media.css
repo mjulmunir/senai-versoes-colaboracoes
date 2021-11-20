@@ -1,26 +1,21 @@
 .media .row {
-	height: fit-content;
+  height: fit-content;
 }
 
-.media .col .link {
-	background-color: rgb(240, 240, 240);
-	display: inline-block;
-	height: fit-content;
-	width: fit-content;
-	text-decoration: none;
-	color: black;
+.media .link {
+  height: fit-content;
+  width: fit-content;
+  color: black;
 }
 
 @media only screen and (min-width: 992px) {
-	.media .col .link .image {
-		height: 18vw;
-		width: auto;
-	}
+  .media .link .img-fluid {
+    max-height: 18vw;
+  }
 }
 
 @media only screen and (max-width: 991px) {
-	.media .col .link .image {
-		max-width: 50vw;
-		height: auto;
-	}
+  .media .link .img-fluid {
+    max-width: 80%;
+  }
 }
