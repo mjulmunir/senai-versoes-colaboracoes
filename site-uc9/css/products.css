@@ -1,13 +1,17 @@
 .products .title {
 	height: 5vw;
-	font-size: 3vw;
+	font-size: 2vw;
 	margin-bottom: 4%;
-	margin-top: 7%;
+	margin-top: 0;
 }
 
 .products .title .img-fluid {
 	max-height: 60%;
 	margin-right: 1.5%;
+}
+
+.products #section-2 {
+	margin-top: 5%;
 }
 
 .products .row {

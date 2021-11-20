@@ -1,7 +1,21 @@
-function featuredProducts() {
-    const products = document.getElementById("featured-products");
+function promotionProducts() {
+    const products = document.getElementById("promotion-products");
     const productsFolder = "img/products";
     const productsList = [
+        [
+            "processor.png",
+            "#",
+            "Processador: ..., Marca: ..., Modelo: ...",
+            "R$ ...",
+        ],
+        [
+            "graphics-card.jpg",
+            "#",
+            "Placa de vídeo, Marca: ..., Modelo: ...",
+            "R$ ...",
+        ],
+        ["tablet.jpg", "#", "Tablet, Marca: ...", "R$ ..."],
+        ["cpu-cooler.jpg", "#", "Cooler, Marca: ..., Tamanho: ...", "R$ ..."],
         [
             "all-in-one.png",
             "#",
@@ -46,7 +60,6 @@ function featuredProducts() {
             "R$ ...",
         ],
     ];
-
     return {
         products,
         productsFolder,
@@ -54,6 +67,6 @@ function featuredProducts() {
     };
 }
 
-const featured_products = featuredProducts();
+const promotion_products = promotionProducts();
 
-export { featured_products, featuredProducts as default };
+export { promotion_products, promotionProducts as default };

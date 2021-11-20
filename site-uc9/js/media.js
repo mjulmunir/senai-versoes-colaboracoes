@@ -1,4 +1,4 @@
-export default function mediaContent() {
+function mediaContent() {
 	const media = document.getElementById("media");
 	const mediaFolder = "img/media";
 	const mediaList = [
@@ -13,3 +13,7 @@ export default function mediaContent() {
 		mediaList,
 	};
 }
+
+const media_content = mediaContent();
+
+export { media_content, mediaContent as default };

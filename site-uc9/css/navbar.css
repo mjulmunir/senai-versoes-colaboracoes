@@ -1,41 +1,38 @@
-/* .navbar {
-	font-size: 1.3vw;
-} */
-
 .navbar .nav {
-	height: 5vw !important;
-	margin: 0;
-	padding: 0 10% !important;
+    height: var(--my-navbar-height) !important;
+    margin: 0;
+    padding: 0 10% !important;
 }
 
 .navbar .nav-link,
 .navbar .dropdown-menu {
-	width: 100% !important;
-	border-color: #198754;
+    width: 100% !important;
+    border-color: #198754;
+    font-size: 1.7vw;
 }
 
 .navbar .dropdown-menu .nav-link {
-	width: 100% !important;
+    width: 100% !important;
 }
 
 .navbar .show .nav {
-	height: auto !important;
+    height: auto !important;
 }
 
 .navbar .show .nav-link,
 .navbar .show .dropdown-menu {
-	width: 100% !important;
+    width: 100% !important;
 }
 
 .navbar .navbar-toggler {
-	height: 4vw;
-	width: auto;
-	padding: 0.1% 2%;
+    height: 4vw;
+    width: auto;
+    padding: 0.1% 2%;
 }
 
 .navbar .navbar-toggler span {
-	height: 90%;
-	width: 4vw;
-	margin: 0;
-	float: left;
+    height: 90%;
+    width: 4vw;
+    margin: 0;
+    float: left;
 }
