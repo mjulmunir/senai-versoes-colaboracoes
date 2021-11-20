@@ -45,6 +45,25 @@
                 promotion_products.products
             );
         </script>
+        <script defer>
+            setInterval(() => {
+                var d = new Date();
+                var hours = 24 - d.getHours();
+                var min = 60 - d.getMinutes();
+                var sec = 60 - d.getSeconds();
+
+                var min = `${min}`.length === 1 ? `0${min}` : min;
+                var sec = `${sec}`.length === 1 ? `0${sec}` : sec;
+
+                var timers = document.getElementsByClassName("timer");
+
+                for (let i = 0; i < timers.length; i++) {
+                    timers[
+                        i
+                    ].innerHTML = `Tempo restante: ${hours}:${min}:${sec}`;
+                }
+            }, 1000);
+        </script>
     </head>
 
     <body>
@@ -395,27 +414,8 @@
 
         <div class="section">
             <div class="products">
-                <div class="container">
-                    <b id="section-title">Ofertas em destaque</b>
-                    <div class="row row-cols-1" id="promotion-products"></div>
-                </div>
-
-                <div
-                    class="
-                        my-button
-                        container-fluid
-                        d-flex
-                        justify-content-center
-                        align-items-center
-                    "
-                >
-                    <button
-                        class="btn btn-success btn-lg"
-                        style="font-size: 1.5vw"
-                    >
-                        MAIS PRODUTOS
-                    </button>
-                </div>
+                <span id="section-title">Título da seção aqui</span>
+                <div id="promotion-products"></div>
             </div>
         </div>
 

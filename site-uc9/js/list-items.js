@@ -1,12 +1,12 @@
 function listMainPageProducts(itemList, itemSource, items) {
     for (let i = 0; i < itemList.length; i++) {
-        let img = document.createElement("img");
-        let imgDiv = document.createElement("div");
-        let desc = document.createElement("p");
-        let price = document.createElement("p");
-        let infoDiv = document.createElement("div");
-        let a = document.createElement("a");
-        let col = document.createElement("div");
+        const img = document.createElement("img");
+        const imgDiv = document.createElement("div");
+        const desc = document.createElement("p");
+        const price = document.createElement("p");
+        const infoDiv = document.createElement("div");
+        const a = document.createElement("a");
+        const col = document.createElement("div");
 
         img.src = `${itemSource}/${itemList[i][0]}`;
         img.alt = itemList[i][0];
@@ -40,26 +40,63 @@ function listMainPageProducts(itemList, itemSource, items) {
 
 function listPromotionProducts(itemList, itemSource, items) {
     for (let i = 0; i < itemList.length; i++) {
-        let a = document.createElement("a");
-        let img = document.createElement("img");
-        let descSpan = document.createElement("span");
-        let priceSpan = document.createElement("span");
+        const imgDiv = document.createElement("div");
+        const img = document.createElement("img");
+        const descriptionDiv = document.createElement("div");
+        const descriptionAlign = document.createElement("div");
+        const priceDiv = document.createElement("div");
+        const priceAlign = document.createElement("div");
+        const priceSpan = document.createElement("span");
+        const a = document.createElement("a");
+        const timerDiv = document.createElement("div");
+        const timer = document.createElement("span");
+        const inventory = document.createElement("span");
+        const description = itemList[i][2].split(", ");
+        const price = itemList[i][3];
+        const link = itemList[i][1];
 
         img.src = `${itemSource}/${itemList[i][0]}`;
         img.alt = itemList[i][0];
         img.className = "img-fluid";
 
-        descSpan.appendChild(document.createTextNode(`${itemList[i][2]}`));
-        descSpan.className = "col";
+        imgDiv.className =
+            "col d-flex justify-content-center align-items-center";
+        imgDiv.appendChild(img);
 
-        priceSpan.appendChild(document.createTextNode(`${itemList[i][3]}`));
-        priceSpan.className = "col";
+        descriptionDiv.className =
+            "col d-flex justify-content-center align-items-center";
 
-        a.href = `${itemList[i][1]}`;
-        a.className = "link rounded col row row-cols-3 gy-3";
-        a.appendChild(img);
-        a.appendChild(descSpan);
-        a.appendChild(priceSpan);
+        description.forEach((element) => {
+            const descriptionSpan = document.createElement("span");
+
+            descriptionSpan.appendChild(document.createTextNode(element));
+            descriptionSpan.appendChild(document.createElement("br"));
+
+            descriptionAlign.appendChild(descriptionSpan);
+        });
+        descriptionDiv.appendChild(descriptionAlign);
+
+        priceSpan.appendChild(document.createTextNode(price));
+
+        priceDiv.className =
+            "col d-flex justify-content-center align-items-center";
+        priceAlign.appendChild(priceSpan);
+        priceDiv.appendChild(priceAlign);
+
+        timer.className = "timer";
+        inventory.innerHTML = `Itens em estoque: ${itemList[i][4]}`;
+
+        timerDiv.className = "warning d-flex justify-content-around";
+
+        timerDiv.appendChild(timer);
+        timerDiv.appendChild(inventory);
+
+        a.href = link;
+        a.className = "link rounded row row-cols-3";
+        a.appendChild(imgDiv);
+        a.appendChild(descriptionDiv);
+        a.appendChild(priceDiv);
+        a.appendChild(timerDiv);
 
         items.appendChild(a);
     }
@@ -67,9 +104,9 @@ function listPromotionProducts(itemList, itemSource, items) {
 
 function listMedia(itemList, itemSource, items) {
     for (let i = 0; i < itemList.length; i++) {
-        let div = document.createElement("div");
-        let a = document.createElement("a");
-        let img = document.createElement("img");
+        const div = document.createElement("div");
+        const a = document.createElement("a");
+        const img = document.createElement("img");
 
         img.className = "image";
         img.src = `${itemSource}/${itemList[i][0]}`;
