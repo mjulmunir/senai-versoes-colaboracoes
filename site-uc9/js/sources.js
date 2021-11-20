@@ -1,6 +1,7 @@
-const linkArray = ["news", "promotion", "kit"];
+const references = ["news", "promotion", "kit"];
 
-linkArray.forEach((item) => {
-    let link = document.getElementById(item);
-    link.href = `${item}.html`;
-});
+for (let i = 0; i < references.length; i++) {
+  $(`#${references[i]}`).attr('href', function () {
+    return `${references[i]}.html`;
+  });
+}

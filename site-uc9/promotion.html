@@ -33,6 +33,8 @@
       defer
     ></script>
 
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+
     <script src="./js/sources.js" defer></script>
 
     <script type="module" defer>
@@ -45,6 +47,7 @@
         promotion_products.products
       );
     </script>
+    
     <script defer>
       setInterval(() => {
         var d = new Date();
@@ -58,14 +61,20 @@
         var timers = document.getElementsByClassName("timer");
 
         for (let i = 0; i < timers.length; i++) {
-          timers[i].innerHTML = `${hours}:${min}:${sec}`;
+          timers[i].innerHTML =
+            timers[i].innerHTML !== "COMPRAR"
+              ? `${hours}:${min}:${sec}`
+              : "COMPRAR";
         }
-      }, 1000);
 
-      function buyItem() {
-        this.innerHTML = "<b>COMPRAR</b>";
-        window.stop();
-      }
+        $(timers)
+          .mouseover(function () {
+            $(this).text("COMPRAR");
+          })
+          .mouseout(function () {
+            $(this).text(`${hours}:${min}:${sec}`);
+          });
+      }, 1000);
     </script>
   </head>
 

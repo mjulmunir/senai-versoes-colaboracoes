@@ -67,7 +67,6 @@ function listPromotionProducts(itemList, itemSource, items) {
     price.className = "price";
 
     btn.setAttribute("class", "timer rounded btn-outline-success");
-    btn.addEventListener("mouseover", buyItem);
 
     btnDiv.setAttribute(
       "class",
@@ -98,8 +97,7 @@ function listMedia(itemList, itemSource, items) {
     img.src = `${itemSource}/${itemList[i][0]}`;
     img.alt = `${itemList[i][0]}`;
 
-    a.className =
-      "link col d-flex align-items-center justify-content-center";
+    a.className = "link col d-flex align-items-center justify-content-center";
     a.href = `${itemList[i][1]}`;
     a.appendChild(img);
 
