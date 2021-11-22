@@ -1,6 +1,5 @@
 function newProducts() {
-    const products = document.getElementById("new-products");
-    const productsFolder = "img/products";
+    const productType = "new";
     const productsList = [
         [
             "processor.png",
@@ -19,8 +18,7 @@ function newProducts() {
     ];
 
     return {
-        products,
-        productsFolder,
+        productType,
         productsList,
     };
 }

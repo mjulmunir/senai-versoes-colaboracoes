@@ -34,6 +34,8 @@
       defer
     ></script>
 
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+
     <script src="./js/sources.js" defer></script>
 
     <script type="module" defer>
@@ -42,15 +44,10 @@
       import { media_content } from "./js/media.js";
       import { listProducts, listMedia } from "./js/list-items.js";
 
+      listProducts(new_products.productType, new_products.productsList);
       listProducts(
-        new_products.productsList,
-        new_products.productsFolder,
-        new_products.products
-      );
-      listProducts(
-        featured_products.productsList,
-        featured_products.productsFolder,
-        featured_products.products
+        featured_products.productType,
+        featured_products.productsList
       );
       listMedia(
         media_content.mediaList,
@@ -311,11 +308,7 @@
               <b>Produtos novos</b>
             </div>
             <div
-              class="
-                row row-cols-2 row-cols-sm-3 row-cols-lg-4
-                gx-3 gx-lg-5
-                gy-5 gy-lg-7
-              "
+              class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 g-3"
               id="new-products"
             ></div>
           </div>
@@ -325,11 +318,7 @@
               <b>Ofertas em destaque</b>
             </div>
             <div
-              class="
-                row row-cols-2 row-cols-sm-3 row-cols-lg-4
-                gx-3 gx-lg-5
-                gy-5 gy-lg-7
-              "
+              class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 g-3"
               id="featured-products"
             ></div>
           </div>

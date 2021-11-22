@@ -1,6 +1,5 @@
 function featuredProducts() {
-    const products = document.getElementById("featured-products");
-    const productsFolder = "img/products";
+    const productType = "featured";
     const productsList = [
         [
             "all-in-one.png",
@@ -48,8 +47,7 @@ function featuredProducts() {
     ];
 
     return {
-        products,
-        productsFolder,
+        productType,
         productsList,
     };
 }
