@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="section">
+      <div class="container">
+        <div class="products">
+          <div class="container">
+            <div id="section-1" class="title d-flex align-items-center">
+              <img
+                src="assets/icons/bell.png"
+                alt="bell.png"
+                class="img-fluid"
+              />
+              <b>APROVEITE, A PROMOÇÃO ACABA EM <span class="timer"></span></b>
+            </div>
+            <div
+              class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 g-3"
+              id="promotion-products"
+            >
+              <div
+                class="col"
+                *ngFor="let promotionProduct of promotionProducts"
+              >
+                <a
+                  routerLink="{{ promotionProduct.ref }}"
+                  class="card text-dark bg-light"
+                  style="
+                    background-color: rgb(235, 235, 235);
+                    text-decoration: none;
+                    font-size: 1.1vw;
+                  "
+                >
+                  <div
+                    class="card-body d-flex justify-content-center"
+                    style="height: 12vw"
+                  >
+                    <img
+                      src="assets/products/{{ promotionProduct.name }}"
+                      alt="{{ promotionProduct.name }}"
+                      class="card-img-top"
+                    />
+                  </div>
+                  <div class="card-body" style="height: 3vw">
+                    <div class="card-text">
+                      {{ promotionProduct.description }}
+                    </div>
+                  </div>
+                  <div class="card-body" style="height: 3vw">
+                    <div class="card-text text-center">
+                      {{ promotionProduct.price }}
+                    </div>
+                  </div>
+                  <div class="card-footer text-center">
+                    <button class="timer btn btn-outline-success"></button>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="
+              my-button
+              container-fluid
+              d-flex
+              justify-content-center
+              align-items-center
+            "
+          >
+            <button class="btn btn-success btn-lg" style="font-size: 1.2vw">
+              MAIS PRODUTOS
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
