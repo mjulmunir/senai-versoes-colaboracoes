@@ -1,0 +1,43 @@
+/* Header */
+header .nav,
+header .navbar,
+header .nav-item,
+header .nav-link {
+    height: var(--my-header-height) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Header - item 1 */
+header .img-fluid {
+    max-height: 80%;
+}
+
+/* Header - item 2 */
+header form.d-flex {
+    height: 2.5vw;
+    width: 100%;
+}
+
+header form .form-control,
+header form .btn {
+    height: inherit;
+    padding: 0 1%;
+    border-radius: 0;
+    font-size: 1.2vw;
+}
+
+/* Header - item 3 */
+header .nav .nav-item .d-flex .nav-item .nav-link {
+    font-size: 1.3vw;
+}
+
+header .quick-access .nav-link {
+    height: 80% !important;
+    width: 60% !important;
+    padding: 0 !important;
+}
+
+header .quick-access .img-fluid {
+    max-height: 50%;
+}
