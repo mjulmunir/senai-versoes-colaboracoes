@@ -1,37 +1,32 @@
-<div
-  class="flip-card card text-dark bg-light"
-  style="text-decoration: none; font-size: 1.1vw; perspective: 1000px"
+<mat-card
+  class="card"
   (mouseover)="toggle(product)"
   (mouseout)="toggle(product)"
 >
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <div class="card-body d-flex justify-content-center" style="height: 12vw">
-        <img
-          class="card-img-top"
-          src="./assets/img/products/{{ product.src }}"
-          alt="{{ product.src }}"
-        />
+  <mat-card-content
+    class="container"
+    (click)="emphasize(product)"
+    [@flipCard]="product.rotate ? 'back' : 'front'"
+  >
+    <mat-card-content class="img-container"
+      ><img
+        class="img"
+        src="./assets/img/products/{{ product.src }}"
+        alt="{{ product.src }}"
+    /></mat-card-content>
+    <mat-card-content class="info-container">
+      <div class="info">
+        <p>{{ product.desc }}</p>
+        <p>{{ product.price }}</p>
       </div>
-    </div>
-    <div class="flip-card-back">
-      <div class="card-body" style="height: 3vw">
-        <div class="card-text">
-          {{ product.desc }}
-        </div>
-      </div>
-      <div class="card-body" style="height: 3vw">
-        <div class="card-text text-center">
-          {{ product.price }}
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card-footer text-center">
+    </mat-card-content>
+  </mat-card-content>
+  <mat-card-footer class="btn-container">
     <a
+      mat-button
       routerLink="/{{ product.ref }}"
       class="timer btn btn-outline-success"
-      [@wordClock]="product.status ? 'clock' : 'word'"
+      [@wordClock]="product.status ? 'word' : 'clock'"
     ></a>
-  </div>
-</div>
+  </mat-card-footer>
+</mat-card>

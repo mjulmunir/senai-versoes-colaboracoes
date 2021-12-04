@@ -2,167 +2,104 @@
 <app-banner></app-banner>
 <app-navbar></app-navbar>
 <div class="section">
-    <div class="container">
-        <div class="products">
-            <div class="container">
-                <div id="section-1" class="title d-flex align-items-center">
-                    <img
-                        src="./assets/img/icons/bell.png"
-                        alt="bell.png"
-                        class="img-fluid"
-                    />
-                    <b>Produtos novos</b>
-                </div>
-                <div
-                    class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 g-3"
-                    id="new-products"
-                >
-                    <div class="col" *ngFor="let product of new_products">
-                        <a
-                            routerLink="/{{ product.ref }}"
-                            class="card text-dark bg-light"
-                            style="
-                                background-color: rgb(235, 235, 235);
-                                text-decoration: none;
-                                font-size: 1.1vw;
-                            "
-                        >
-                            <div
-                                class="card-body d-flex justify-content-center"
-                                style="height: 12vw"
-                            >
-                                <img
-                                    class="card-img-top"
-                                    src="./assets/img/products/{{ product.src }}"
-                                    alt="{{ product.src }}"
-                                />
-                            </div>
-                            <div class="card-body" style="height: 3vw">
-                                <div class="card-text">
-                                    {{ product.desc }}
-                                </div>
-                            </div>
-                            <div class="card-body" style="height: 3vw">
-                                <div class="card-text text-center">
-                                    {{ product.price }}
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div id="section-2" class="title d-flex align-items-center">
-                    <img
-                        src="./assets/img/icons/fire.png"
-                        alt="fire.png"
-                        class="img-fluid"
-                    />
-                    <b>Ofertas em destaque</b>
-                </div>
-                <div
-                    class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 g-3"
-                    id="featured-products"
-                >
-                    <div class="col" *ngFor="let product of featured_products">
-                        <a
-                            routerLink="/{{ product.ref }}"
-                            class="card text-dark bg-light"
-                            style="
-                                background-color: rgb(235, 235, 235);
-                                text-decoration: none;
-                                font-size: 1.1vw;
-                            "
-                        >
-                            <div
-                                class="card-body d-flex justify-content-center"
-                                style="height: 12vw"
-                            >
-                                <img
-                                    class="card-img-top"
-                                    src="./assets/img/products/{{ product.src }}"
-                                    alt="{{ product.src }}"
-                                />
-                            </div>
-                            <div class="card-body" style="height: 3vw">
-                                <div class="card-text">
-                                    {{ product.desc }}
-                                </div>
-                            </div>
-                            <div class="card-body" style="height: 3vw">
-                                <div class="card-text text-center">
-                                    {{ product.price }}
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div
-                class="
-                    my-button
-                    container-fluid
-                    d-flex
-                    justify-content-center
-                    align-items-center
-                "
-            >
-                <button class="btn btn-success btn-lg" style="font-size: 1.5vw">
-                    MAIS PRODUTOS
-                </button>
-            </div>
+  <div class="container">
+    <div class="products">
+      <div class="container">
+        <div id="section-1" class="title d-flex align-items-center">
+          <img
+            src="./assets/img/icons/bell.png"
+            alt="bell.png"
+            class="img-fluid"
+          />
+          <b>Produtos novos</b>
         </div>
+        <div
+          class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 g-3"
+          id="new-products"
+        >
+          <div class="col" *ngFor="let product of new_products">
+            <app-card [product]="product"></app-card>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div id="section-2" class="title d-flex align-items-center">
+          <img
+            src="./assets/img/icons/fire.png"
+            alt="fire.png"
+            class="img-fluid"
+          />
+          <b>Ofertas em destaque</b>
+        </div>
+        <div
+          class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 g-3"
+          id="featured-products"
+        >
+          <div class="col" *ngFor="let product of featured_products">
+            <app-card [product]="product"></app-card>
+          </div>
+        </div>
+      </div>
+      <div
+        class="
+          my-button
+          container-fluid
+          d-flex
+          justify-content-center
+          align-items-center
+        "
+      >
+        <button class="btn btn-success btn-lg" style="font-size: 1.5vw">
+          MAIS PRODUTOS
+        </button>
+      </div>
     </div>
+  </div>
 </div>
 <div
-    class="
-        container-fluid
-        bg-dark
-        d-flex
-        align-items-center
-        justify-content-center
-    "
-    style="color: white; height: 5vw; font-size: 1.7vw"
+  class="
+    container-fluid
+    bg-dark
+    d-flex
+    align-items-center
+    justify-content-center
+  "
+  style="color: white; height: 5vw; font-size: 1.7vw"
 >
-    <b>PRODUTOS E CLIENTES NAS REDES SOCIAIS</b>
+  <b>PRODUTOS E CLIENTES NAS REDES SOCIAIS</b>
 </div>
 <div class="section">
-    <div class="container-fluid">
-        <div class="media">
-            <div class="container-fluid">
-                <div
-                    class="
-                        row row-cols-1 row-cols-lg-3
-                        g-3 g-lg-7
-                        d-flex
-                        justify-content-center
-                        w-100
-                    "
-                    id="media"
-                >
-                    <div
-                        class="col d-flex justify-content-center"
-                        *ngFor="let media of social_media"
-                    >
-                        <a
-                            href="{{ media.ref }}"
-                            class="
-                                link
-                                d-flex
-                                align-items-center
-                                justify-content-center
-                            "
-                        >
-                            <img
-                                src="./assets/img/media/{{ media.src }}"
-                                alt="{{ media.src }}"
-                                class="img-fluid"
-                            />
-                        </a>
-                    </div>
-                </div>
-            </div>
+  <div class="container-fluid">
+    <div class="media">
+      <div class="container-fluid">
+        <div
+          class="
+            row row-cols-1 row-cols-lg-3
+            g-3 g-lg-7
+            d-flex
+            justify-content-center
+            w-100
+          "
+          id="media"
+        >
+          <div
+            class="col d-flex justify-content-center"
+            *ngFor="let media of social_media"
+          >
+            <a
+              href="{{ media.ref }}"
+              class="link d-flex align-items-center justify-content-center"
+            >
+              <img
+                src="./assets/img/media/{{ media.src }}"
+                alt="{{ media.src }}"
+                class="img-fluid"
+              />
+            </a>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 <app-footer></app-footer>
