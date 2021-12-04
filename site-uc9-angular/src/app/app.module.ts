@@ -21,6 +21,8 @@ import { HeaderComponent } from "./components/header/header.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 
 import { AccountComponent } from "./pages/account/account.component";
+import { CardComponent } from './components/card/card.component';
+import { CardPromotionComponent } from './components/card-promotion/card-promotion.component';
 import { ContactComponent } from "./pages/contact/contact.component";
 import { HomeComponent } from "./pages/home/home.component";
 import { InformationComponent } from "./pages/information/information.component";
@@ -31,6 +33,8 @@ import { PromotionComponent } from "./pages/promotion/promotion.component";
         AccountComponent,
         AppComponent,
         BannerComponent,
+        CardComponent,
+        CardPromotionComponent,
         ContactComponent,
         FooterComponent,
         HeaderComponent,
