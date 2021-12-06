@@ -1,92 +1,60 @@
-<mat-toolbar class="navbar-dark bg-dark">
-  <mat-toolbar-row class="container">
-    <a
-      class="
-        nav-link
-        link-item
-        rounded
-        text-center
-        d-flex
-        align-items-center
-        justify-content-around
-      "
-      [matMenuTriggerFor]="menu"
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
     >
-      <mat-icon>menu</mat-icon>
-      <span>Todas as categorias</span>
-    </a>
-    <mat-menu #menu="matMenu" class="navbar-dark bg-dark">
-      <a class="nav-link dropdown-item link-item rounded" routerLink="/#"
-        ># Computadores</a
-      >
-      <a class="nav-link dropdown-item link-item rounded" routerLink="/#"
-        ># Smartphones</a
-      >
-      <a class="nav-link dropdown-item link-item rounded" routerLink="/#"
-        ># Tablets</a
-      >
-      <a class="nav-link dropdown-item link-item rounded" routerLink="/#"
-        ># Consoles</a
-      >
-      <a class="nav-link dropdown-item link-item rounded" routerLink="/#"
-        ># Hardware</a
-      >
-      <a class="nav-link dropdown-item link-item rounded" routerLink="/#"
-        ># Periféricos</a
-      >
-      <a class="nav-link dropdown-item link-item rounded" routerLink="/#"
-        ># Produtos digitais</a
-      >
-      <a class="nav-link dropdown-item link-item rounded" routerLink="/#"
-        ># Cadeiras</a
-      >
-    </mat-menu>
-
-    <a class="nav-link link-item rounded text-center" routerLink="/#"
-      >Novidades</a
-    >
-    <a class="nav-link link-item rounded text-center" routerLink="/promotion"
-      >Promoções</a
-    >
-    <a class="nav-link link-item rounded text-center" routerLink="/#"
-      >Kits</a
-    ></mat-toolbar-row
-  >
-</mat-toolbar>
-
-<div
-  class="example-container"
-  [class.example-is-mobile]="mobileQuery.matches"
-  *ngIf="shouldRun"
->
-  <mat-toolbar color="primary" class="example-toolbar">
-    <button mat-icon-button (click)="snav.toggle()">
-      <mat-icon>menu</mat-icon>
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <h1 class="example-app-name">Responsive App</h1>
-  </mat-toolbar>
-
-  <mat-sidenav-container
-    class="example-sidenav-container"
-    [style.marginTop.px]="mobileQuery.matches ? 56 : 0"
-  >
-    <mat-sidenav
-      #snav
-      [mode]="mobileQuery.matches ? 'over' : 'side'"
-      [fixedInViewport]="mobileQuery.matches"
-      fixedTopGap="56"
+    <div
+      class="justify-content-around collapse navbar-collapse"
+      id="navbarSupportedContent"
     >
-      <mat-nav-list>
-        <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{
-          nav
-        }}</a>
-      </mat-nav-list>
-    </mat-sidenav>
-
-    <mat-sidenav-content>
-      <p *ngFor="let content of fillerContent">{{ content }}</p>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-</div>
-
-<div *ngIf="!shouldRun">Please open on Stackblitz to see result</div>
+      <ul class="container nav nav-justified navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link link-item rounded text-center dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            >Todas as categorias
+          </a>
+          <ul
+            class="dropdown-menu navbar-dark bg-dark"
+            id="navbar-dropdown"
+            aria-labelledby="navbarDropdown"
+          >
+            <a
+              *ngFor="let dropdown_item of dropdown_items"
+              class="nav-link dropdown-item link-item rounded btn-outline-success container-fluid"
+              routerLink="{{ dropdown_item.ref }}"
+              >{{ dropdown_item.name }}</a
+            >
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-item rounded text-center" routerLink="/#"
+            >Novidades</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-item rounded text-center" routerLink="/promotion"
+            >Promoções</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-item rounded text-center" routerLink="/#"
+            >Kits</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
