@@ -1,0 +1,8 @@
+#navbar-dropdown {
+  border: 1px solid #198754;
+}
+
+.dropdown-item,
+.show {
+  width: 100% !important;
+}

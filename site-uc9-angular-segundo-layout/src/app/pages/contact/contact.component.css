@@ -1,0 +1,10 @@
+@media only screen and (max-width: 991px) {
+    #contact {
+        margin-top: 3%;
+    }
+}
+
+.section button {
+    margin-bottom: 0.5%;
+    text-align: left;
+}

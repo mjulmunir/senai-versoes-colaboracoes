@@ -1,0 +1,32 @@
+<mat-card
+  class="card"
+  (mouseover)="toggle(product)"
+  (mouseout)="toggle(product)"
+>
+  <mat-card-content
+    class="container"
+    (click)="emphasize(product)"
+    [@flipCard]="product.rotate ? 'back' : 'front'"
+  >
+    <mat-card-content class="img-container"
+      ><img
+        class="img"
+        src="./assets/img/products/{{ product.src }}"
+        alt="{{ product.src }}"
+    /></mat-card-content>
+    <mat-card-content class="info-container">
+      <div class="info">
+        <p>{{ product.desc }}</p>
+        <p>{{ product.price }}</p>
+      </div>
+    </mat-card-content>
+  </mat-card-content>
+  <mat-card-footer class="btn-container">
+    <a
+      mat-button
+      routerLink="/{{ product.ref }}"
+      class="timer btn btn-outline-success"
+      [@wordClock]="product.status ? 'word' : 'clock'"
+    ></a>
+  </mat-card-footer>
+</mat-card>

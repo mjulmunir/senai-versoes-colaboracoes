@@ -1,0 +1,110 @@
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1vw;
+  background-color: #198754;
+  height: calc(3vw + 24px);
+}
+
+/* Item 1 */
+.logo-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.logo-container button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: fit-content;
+  height: inherit;
+}
+
+.logo .img-fluid {
+  width: auto;
+  height: inherit;
+  float: left;
+}
+
+/* Item 2 */
+form {
+  background: transparent;
+  border: 1px solid;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  height: 40%;
+}
+
+form input {
+  background: transparent;
+  border: none;
+  outline: none;
+  float: left;
+  width: 25vw;
+  height: 100%;
+}
+
+form button {
+  background: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  width: fit-content;
+  height: 100%;
+}
+
+form button img {
+  float: right;
+  width: auto;
+  height: 80%;
+}
+
+/* Item 3 */
+.login p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2rem;
+}
+
+.login a {
+  text-decoration: none;
+}
+
+/* Sidenav */
+mat-sidenav-container {
+  overflow: hidden;
+}
+
+mat-sidenav {
+  background: transparent;
+  box-shadow: none !important;
+  width: 100%;
+  height: 100vh;
+}
+
+mat-nav-list {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  padding-top: 0;
+}
+
+.nav-list-container {
+  background-color: #198754;
+  height: 100%;
+}

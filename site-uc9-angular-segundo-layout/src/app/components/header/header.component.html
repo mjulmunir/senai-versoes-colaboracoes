@@ -1,0 +1,41 @@
+<mat-toolbar>
+  <div class="logo-container">
+    <button mat-icon-button (click)="sidenav.open()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <a routerLink="/" class="nav-link logo">
+      <img
+        src="./assets/img/logo-banner/logo.png"
+        alt="logomarca"
+        class="img-fluid"
+      />
+    </a>
+  </div>
+  <form>
+    <input />
+    <button type="submit">
+      <img src="./assets/img/icons/magnifying-glass.png" />
+    </button>
+  </form>
+  <div class="login text-center">
+    <p>Faça seu <a routerLink="/account">login</a></p>
+    <p>ou <a routerLink="/account">cadastre-se.</a></p>
+  </div>
+</mat-toolbar>
+
+<mat-sidenav-container (click)="sidenav.toggle()">
+  <mat-sidenav #sidenav fixedInViewport>
+    <mat-nav-list>
+      <div class="nav-list-container">
+        <a
+          *ngFor="let nav of navbarItem"
+          mat-list-item
+          routerLink="/{{ nav.ref }}"
+        >
+          {{ nav.name }}
+        </a>
+      </div>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content></mat-sidenav-content>
+</mat-sidenav-container>

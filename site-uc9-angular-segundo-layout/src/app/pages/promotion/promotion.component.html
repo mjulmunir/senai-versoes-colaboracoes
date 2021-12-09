@@ -1,0 +1,43 @@
+<app-header></app-header>
+<app-banner></app-banner>
+<div class="section">
+  <div class="container">
+    <div class="products">
+      <div class="container">
+        <div id="section-1" class="title d-flex align-items-center">
+          <img
+            src="./assets/img/icons/bell.png"
+            alt="bell.png"
+            class="img-fluid"
+          />
+          <b>APROVEITE, A PROMOÇÃO ACABA EM <span class="timer"></span></b>
+        </div>
+        <div
+          class="row row-cols-2 row-cols-sm-3 row-cols-lg-4 g-3"
+          id="promotion-products"
+        >
+          <div
+            class="col"
+            *ngFor="let product of promotional_products"
+          >
+            <app-card-promotion [product]="product"></app-card-promotion>
+          </div>
+        </div>
+      </div>
+      <div
+        class="
+          my-button
+          container-fluid
+          d-flex
+          justify-content-center
+          align-items-center
+        "
+      >
+        <button class="btn btn-success btn-lg" style="font-size: 1.2vw">
+          MAIS PRODUTOS
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,82 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  --my-navbar-height: 3vw;
+  --my-footer-left-padding: 8%;
+}
+
+@media only screen and (max-width: 650px) {
+  body {
+    --my-header-height: 10vw;
+  }
+}
+
+@media only screen and (min-width: 651px) and (max-width: 990px) {
+  body {
+    --my-header-height: 8vw;
+  }
+}
+
+@media only screen and (min-width: 991px) {
+  body {
+    --my-header-height: 6vw;
+    --my-footer-left-padding: 0;
+  }
+}
+
+.section {
+  background-color: rgb(230, 230, 230);
+  height: fit-content;
+  min-height: calc(
+    100vh - var(--my-header-height) - var(--my-navbar-height) -
+      var(--my-footer-height)
+  );
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 991px) {
+  .section #sign-up,
+  .section #contact {
+    margin-top: 10%;
+  }
+
+  .section .row-cols-1 {
+    justify-content: center;
+  }
+
+  .section .info {
+    justify-content: left;
+  }
+
+  .section .row-cols-1 .col {
+    width: 85%;
+  }
+}
+
+.link-item {
+  color: rgb(13, 110, 253) !important;
+  text-decoration: none !important;
+  font-size: 1.5vw;
+}
+
+.link-item:focus,
+.link-item:hover {
+  background-color: #198754 !important;
+  border-color: #198754 !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100%;
+}

@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="justify-content-around collapse navbar-collapse"
+      id="navbarSupportedContent"
+    >
+      <ul class="container nav nav-justified navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link link-item rounded text-center dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            >Todas as categorias
+          </a>
+          <ul
+            class="dropdown-menu navbar-dark bg-dark"
+            id="navbar-dropdown"
+            aria-labelledby="navbarDropdown"
+          >
+            <a
+              *ngFor="let dropdown_item of dropdown_items"
+              class="nav-link dropdown-item link-item rounded btn-outline-success container-fluid"
+              routerLink="{{ dropdown_item.ref }}"
+              >{{ dropdown_item.name }}</a
+            >
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-item rounded text-center" routerLink="/#"
+            >Novidades</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-item rounded text-center" routerLink="/promotion"
+            >Promoções</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-item rounded text-center" routerLink="/#"
+            >Kits</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
